@@ -1,0 +1,58 @@
+{
+  "user": [
+    {
+      "id": 23,
+      "nombre": " Andersoa",
+      "apellido": "Vargas",
+      "correo": "colomibas@gmail.com",
+      "edad": "23",
+      "email": "asdasd"
+    },
+    {
+      "nombre": "asdasd",
+      "apellido": "adasd",
+      "email": "dadasdsaas",
+      "edad": "23",
+      "id": 24
+    },
+    {
+      "id": 25,
+      "nombre": "Camila",
+      "apellido": "Skere",
+      "email": "23adas@gmail.com",
+      "edad": "23",
+      "correo": "asasas@fmiLASD"
+    },
+    {
+      "nombre": "asdasdasdsad",
+      "apellido": "dadasd",
+      "email": "dadas",
+      "edad": "344",
+      "id": 26
+    },
+    {
+      "nombre": "editaxas",
+      "apellido": "dasdasd",
+      "email": "dasdad",
+      "edad": "23",
+      "id": 27
+    },
+    {
+      "id": 28
+    },
+    {
+      "nombre": "Test",
+      "apellido": "adasd",
+      "correo": "asdasd@gmail.com",
+      "edad": "23",
+      "id": 29
+    },
+    {
+      "nombre": "Valentin xdasdasdasd",
+      "apellido": "asdasd",
+      "correo": "asdasd",
+      "edad": "23",
+      "id": 30
+    }
+  ]
+}
