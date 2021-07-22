@@ -1,18 +1,18 @@
 import { Vue, Component, Ref } from 'vue-property-decorator'
 import {injectable, inject} from "inversify-props";
 import {PELICULAS_TYPES} from "~/components/peliculas/infrastructure/types/peliculas-type.inf";
-import {PeliculasQueriesApp} from "~/components/peliculas/application/queries/peliculas-queries.app";
 import {
   IPeliculasPaginateDataDTO,
   PeliculasModelDom
 } from "~/components/peliculas/domain/models/peliculas-model.dom";
 import {IPaginateData} from "~/core/domain/models/paginate-data";
+import {GetPeliculasQry} from "~/components/peliculas/application/queries/get-peliculas-qry";
 
 @Component
 @injectable()
 export default class PeliculasList extends Vue {
 
-  @inject(PELICULAS_TYPES.QUERIES) peliculaService : PeliculasQueriesApp
+  @inject(PELICULAS_TYPES.GET_ALL_PELICULAS) peliculaService : GetPeliculasQry
 
   public paginateData: IPaginateData = { total_pages: 0, total_results: 0, page: 1 }
   public listadoPeliculas : Array<PeliculasModelDom> = []
@@ -22,7 +22,7 @@ export default class PeliculasList extends Vue {
   }
 
   public async getAllPeliculas (filters:IPaginateData) : Promise<void> {
-    let { results, total_results, page, total_pages } = await this.peliculaService.getAll(filters)
+    let { results, total_results, total_pages, page } = await this.peliculaService.execute(filters)
     this.listadoPeliculas = results
     this.paginateData = { total_results, page, total_pages }
   }

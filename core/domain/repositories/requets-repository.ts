@@ -3,10 +3,10 @@ import {ID} from "~/core/domain/uuid";
 
 
 
-export interface IRequetsRepository {
-  list (params:string, filters:any) : Promise<any[]>
-  retrieve ( id: ID ): Promise<any>
-  create ( data: any ): Promise<void>
-  update (id: ID, data: any): Promise<void>
+export interface IRequetsRepository<Result = void, params = void> {
+  list (params:string, filters:any) : Promise<Result>
+  retrieve ( id: ID ): Promise<Result>
+  create ( data: params ): Promise<void>
+  update (id: ID, data: params): Promise<void>
   delete (id: ID): Promise<void>
 }
